@@ -15,4 +15,5 @@ int main()
     hlog(__FILE__, __LINE__, LogLevel[4], 4, "this is a test");
     hlog(__FILE__, __LINE__, LogLevel[5], 5, "this is a test");
     hlog(__FILE__, __LINE__, LogLevel[6], 6, "this is a test");
+    hdebug(__FILE__, __LINE__, "this is a test for debug");
 }

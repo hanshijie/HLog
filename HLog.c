@@ -122,3 +122,33 @@ void hlog(const char *file, int line, int level, int status, const char *fmt, ..
 
     return;
 }
+
+void hdebug(const char *file, int line, const char *fmt, ...)
+{
+    hlog(file, line, LogLevel[1], 1, fmt);
+}
+
+void htrace(const char *file, int line, const char *fmt, ...)
+{
+    hlog(file, line, LogLevel[2], 2, fmt);
+}
+
+void hinfo(const char *file, int line, const char *fmt, ...)
+{
+    hlog(file, line, LogLevel[3], 3, fmt);
+}
+
+void hnotice(const char *file, int line, const char *fmt, ...)
+{
+    hlog(file, line, LogLevel[4], 4, fmt);
+}
+
+void hwarning(const char *file, int line, const char *fmt, ...)
+{
+    hlog(file, line, LogLevel[5], 5, fmt);
+}
+
+void hfatal(const char *file, int line, const char *fmt, ...)
+{
+    hlog(file, line, LogLevel[6], 6, fmt);
+}
